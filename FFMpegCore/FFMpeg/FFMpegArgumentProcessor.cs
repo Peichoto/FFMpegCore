@@ -129,7 +129,7 @@ namespace FFMpegCore
         {
             FFMpegHelper.RootExceptionCheck(FFMpegOptions.Options.RootDirectory);
             var instance = new Instance(FFMpegOptions.Options.FFmpegBinary(), _ffMpegArguments.Text);
-            instance.DataReceived += OutputData;
+
             cancellationTokenSource = new CancellationTokenSource();
 
             if (_onTimeProgress != null || (_onPercentageProgress != null && _totalTimespan != null))
